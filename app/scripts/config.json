@@ -1,12 +1,13 @@
 {
   "title": "template",
-  "description": "",
-  "keywords": "",
+  "description": "onboarding template",
+  "keywords": "onboarding, template, demo",
   "url": "https://www.template.com",
-  "shortcutIcon": "",
+  "shortcutIcon": "icon.png",
   "ogImg": "",
   "gaTrackingCode": "UA-63053452-18",
-  "segments": [
+  "applyDescription": "請留下您的資料，我們將盡快與您連繫",
+  "sections": [
     {
       "title": "segment one",
       "description": "segment one description",

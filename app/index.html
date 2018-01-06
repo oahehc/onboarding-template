@@ -11,7 +11,7 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
     <link rel="apple-touch-icon" href="">
-    <link rel="shortcut icon" href="">
+    <link class="shortcut" rel="shortcut icon" href="">
     <title></title>
 
     <!-- build:css styles/vendor.css -->
@@ -32,19 +32,22 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="container">
-    </div>
+    <section class="formSection">
+      <p></p>
+      <div class="form">
+        <input type="text" class="form-control" id="nameInput" placeholder="姓名">
+        <input type="email" class="form-control" id="emailInput" placeholder="電子郵件">
+        <button class="btn btn-primary" id="submitBtn">送出</button>
+      </div>
+      <div id="submitModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
