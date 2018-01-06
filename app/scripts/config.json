@@ -1,0 +1,18 @@
+{
+  "title": "template",
+  "description": "",
+  "keywords": "",
+  "url": "https://www.template.com",
+  "shortcutIcon": "",
+  "ogImg": "",
+  "gaTrackingCode": "UA-63053452-18",
+  "segments": [
+    {
+      "title": "segment one",
+      "description": "segment one description",
+      "bgImage": "",
+      "bgColor": "",
+      "image": ""
+    }
+  ]
+}
