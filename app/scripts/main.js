@@ -39,11 +39,11 @@ $(() => {
     if (res.description) $('meta[name=description]').attr('content', res.description);
     if (res.description) $('meta[property=og\\:description]').attr('content', res.description);
     if (res.url) $('meta[property=og\\:url]').attr('content', res.url);
-    if (res.ogImg) $('meta[property=og\\:image]').attr('content', res.ogImg);
+    if (res.ogImg) $('meta[property=og\\:image]').attr('content', './images/'+res.ogImg);
     if (res.shortcutIcon) $('link[rel="apple-touch-icon"]').attr('href', './images/'+res.shortcutIcon);
     if (res.shortcutIcon) $('link.shortcut').attr('href', './images/'+res.shortcutIcon);
 
-    // ceate segtion
+    // create section
     if (res.applyDescription) $('.formSection > p').text(res.applyDescription);
 
 

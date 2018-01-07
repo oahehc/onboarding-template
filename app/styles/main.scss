@@ -93,42 +93,5 @@ body {
 }
 
 
-/* custom */
-*{
-  font-family: '微軟正黑體', 'calibri', 'Arial';
-}
-body{
-  padding: 0;
-}
-.formSection{
-  width: 100vw;
-  height: 300px;
-  background-color: #111;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  p{
-    text-align: center;
-    color: white;
-    padding: 10px;
-    font-size: 2rem;
-  }
-  .form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    input, button{
-      margin: 5px;
-      height: 35px;
-    }
-    #nameInput{
-      max-width: 150px;
-    }
-    #emailInput{
-      max-width: 200px;
-    }
-  }
-  .modal-body{
-    text-align: center;
-  }
-}
+/* custom */ 
+@import "custom.scss";

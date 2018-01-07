@@ -12,6 +12,8 @@
 #### update app/scripts/config.json
 ### STEP 3 
 #### deploy your website
+1. run gulp on command line
+2. upload file in dist folder to the server
 
 --- 
 ## SCRIPT

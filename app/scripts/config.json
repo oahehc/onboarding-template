@@ -4,15 +4,16 @@
   "keywords": "onboarding, template, demo",
   "url": "https://www.template.com",
   "shortcutIcon": "icon.png",
-  "ogImg": "",
+  "ogImg": "og.jpg",
   "gaTrackingCode": "UA-63053452-18",
-  "applyDescription": "請留下您的資料，我們將盡快與您連繫",
+  "applyDescription": "立刻申請試用",
   "sections": [
     {
-      "title": "segment one",
-      "description": "segment one description",
+      "title": "快速建立產品網站",
+      "description": "只需要三步驟就能立刻開始測試您的產品",
       "bgImage": "",
       "bgColor": "",
+      "color": "",
       "image": ""
     }
   ]
