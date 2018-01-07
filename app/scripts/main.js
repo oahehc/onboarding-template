@@ -2,10 +2,6 @@ $(() => {
   $.ajax({
     url: './scripts/config.json',
   }).done((res) => {
-    console.log('res', res);
-
-
-
     // load ga
     if (res.gaTrackingCode) {
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -45,10 +41,17 @@ $(() => {
 
     // create section
     if (res.applyDescription) $('.formSection > p').text(res.applyDescription);
-
-
-
-
-
+    if (res.sections && res.sections.length>0) {
+      const content = res.sections.reduce((ele, section) => {
+        ele +=`
+          <section style="background-image: url('./images/${section.image}')">
+            <div class="title">${section.title}</div>
+            <div class="description">${section.description}</div>
+          </section>
+        `;
+        return ele
+      }, '');
+      $('.formSection').before(content);
+    }
   })
 })
