@@ -45,8 +45,11 @@ $(() => {
       const content = res.sections.reduce((ele, section) => {
         ele +=`
           <section style="background-image: url('./images/${section.image}')">
-            <div class="title">${section.title}</div>
-            <div class="description">${section.description}</div>
+            <div class="content">
+              <div class="title">${section.title}</div>
+              <div class="description">${section.description}</div>
+            </div>
+            <div class="empty"></div>
           </section>
         `;
         return ele

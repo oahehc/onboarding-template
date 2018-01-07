@@ -4,7 +4,7 @@
 }
 body{
   padding: 0;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
 }
 section{
@@ -12,18 +12,23 @@ section{
   height: 360px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   background-size: contain;
   background-repeat: no-repeat;
-  .title, .description{
-    float: left;
-    padding: 10px;
+  .content{
+    flex: 0 0 auto; 
+    .title{
+      padding: 10px;
+      font-size: 2.6rem;
+    }
+    .description{
+      padding: 10px;
+      font-size: 2rem;
+    }
   }
-  .title{
-    font-size: 2.6rem;
-  }
-  .description{
-    font-size: 2rem;
+  .empty{
+    flex: 1 1 auto; 
   }
 }
 section:nth-child(odd){
@@ -37,6 +42,7 @@ section:nth-child(odd){
 section:nth-child(even){
   background-position: center left;
   background-color: #111;
+  flex-direction: row-reverse;
   .title, .description{
     background-color: rgba(255, 255, 255, .8);
     color: black;
@@ -46,9 +52,10 @@ section:nth-child(even){
 
 /* form */
 .formSection{
+  color: white !important;
   background-color: #374C5E !important;
-  color: white;
   height: 240px !important;
+  flex-direction: column !important;
   p{
     text-align: center;
     padding: 10px;
