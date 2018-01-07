@@ -19,11 +19,11 @@ section{
   .content{
     flex: 0 0 auto; 
     .title{
-      padding: 10px;
+      padding: 10px 20px;
       font-size: 2.6rem;
     }
     .description{
-      padding: 10px;
+      padding: 10px 20px;
       font-size: 2rem;
     }
   }
@@ -70,13 +70,49 @@ section:nth-child(even){
       height: 35px;
     }
     #nameInput{
-      max-width: 150px;
+      width: 150px;
     }
     #emailInput{
-      max-width: 200px;
+      width: 240px;
     }
   }
   .modal-body{
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  section{
+    background-size: cover;  
+    background-position: center center !important;
+    .empty{
+      display: none;
+    }
+    .content{
+      flex: 1 !important;
+    }
+    .title, .description{
+      text-align: center !important;
+    }
+  }
+  
+  .formSection{
+    .form{
+      flex-direction: column;
+      #nameInput, #emailInput, #submitBtn{
+        width: 240px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section{
+    .title{
+      font-size: 2rem !important;
+    }
+    .description{
+      font-size: 1.5rem !important;
+    }
   }
 }
