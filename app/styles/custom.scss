@@ -4,26 +4,51 @@
 }
 body{
   padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 section{
-  width: 100vw;
-  height: 300px;
+  width: 100%;
+  height: 360px;
   display: flex;
   justify-content: center;
-  padding: 20px;
-  p{
+  flex-direction: column;
+  .title, .description{
+    float: left;
+    padding: 10px;
+  }
+  .title{
+    font-size: 2.6rem;
+  }
+  .description{
     font-size: 2rem;
+  }
+}
+section:nth-child(odd){
+  .title, .description{
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    text-align: left;
+  }
+}
+section:nth-child(even){
+  background-color: #111;
+  .title, .description{
+    background-color: rgba(255, 255, 255, .8);
+    color: black;
+    text-align: right;
   }
 }
 
 /* form */
 .formSection{
-  flex-direction: column;
-  background-color: #111;
+  background-color: #374C5E !important;
   color: white;
+  height: 240px !important;
   p{
     text-align: center;
     padding: 10px;
+    font-size: 2.6rem;
   }
   .form{
     display: flex;
@@ -47,4 +72,20 @@ section{
 
 
 .section1{
+  background-image: url('./../images/test.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.section2{
+  background-image: url('./../images/insight.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.section3{
+  background-image: url('./../images/rwd.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
 }
