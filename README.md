@@ -1,8 +1,8 @@
 # Onboarding-Template
 ### The easiest way to create onboarding website for testing your idea
 ---
-### demo site
-#### ...
+### demo
+#### http://onboarding-template.s3-website-us-east-1.amazonaws.com/
 ---
 ## HOW TO START
 
