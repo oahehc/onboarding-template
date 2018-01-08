@@ -18,3 +18,6 @@
 2. upload file in dist folder to the server
 --- 
 
+### apply information collect by ga event
+![Imgur](https://i.imgur.com/ZcaPbA1.png)
+
