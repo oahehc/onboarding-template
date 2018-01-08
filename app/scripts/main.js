@@ -1,6 +1,9 @@
 $(() => {
+  let file = 'config';
+  if (window.location.hash) file = window.location.hash.replace(/#/, '');
+
   $.ajax({
-    url: './scripts/config.json',
+    url: `./scripts/${file}.json`,
   }).done((res) => {
     // load ga
     if (res.gaTrackingCode) {
