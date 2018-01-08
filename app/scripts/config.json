@@ -2,32 +2,43 @@
   "title": "template",
   "description": "onboarding template",
   "keywords": "onboarding, template, demo",
-  "url": "https://www.template.com",
   "shortcutIcon": "icon.png",
-  "ogImg": "og.jpg",
   "gaTrackingCode": "UA-63053452-18",
-  "applyDescription": "立刻申請試用",
+  "product": {
+    "name": "Onboarding Template",
+    "description": "十分鐘內建立您的產品測試網站",
+    "image": "og.jpg",
+    "bgColor": "",
+    "color": ""
+  },
+  "applyForm": {
+    "description": "立刻申請試用",
+    "bgColor": ""
+  }, 
   "sections": [
     {
       "title": "快速建立網站，驗證市場需求",
       "description": "只需要三步驟就能立刻開始測試您的產品",
       "image": "test.jpg",
       "bgColor": "",
-      "color": ""
+      "wordBgColor": "",
+      "wordColor": ""
     },
     {
       "title": "Google Analytics",
       "description": "GA統一管理網站流量與使用者申請資訊",
       "image": "insight.png",
       "bgColor": "",
-      "color": ""
+      "wordBgColor": "",
+      "wordColor": ""
     },
     {
       "title": "Responsive Web Design",
       "description": "支援跨裝置瀏覽",
       "image": "rwd.jpg",
       "bgColor": "",
-      "color": ""
+      "wordBgColor": "",
+      "wordColor": ""
     }
   ]
 }

@@ -30,31 +30,52 @@ $(() => {
 
     // add meta
     if (res.title) document.title = res.title;
-    if (res.title) $('meta[property=og\\:title]').attr('content', res.title);
     if (res.keywords) $('meta[name=keywords]').attr('content', res.keywords);
     if (res.description) $('meta[name=description]').attr('content', res.description);
-    if (res.description) $('meta[property=og\\:description]').attr('content', res.description);
-    if (res.url) $('meta[property=og\\:url]').attr('content', res.url);
-    if (res.ogImg) $('meta[property=og\\:image]').attr('content', './images/'+res.ogImg);
     if (res.shortcutIcon) $('link[rel="apple-touch-icon"]').attr('href', './images/'+res.shortcutIcon);
     if (res.shortcutIcon) $('link.shortcut').attr('href', './images/'+res.shortcutIcon);
+    // if (res.title) $('meta[property=og\\:title]').attr('content', res.title);
+    // if (res.description) $('meta[property=og\\:description]').attr('content', res.description);
+    // if (res.url) $('meta[property=og\\:url]').attr('content', res.url);
+    // if (res.ogImg) $('meta[property=og\\:image]').attr('content', './images/'+res.ogImg);
+
+    // update product info
+    if (res.product) {
+      if (res.product.name) $('#product > .name').text(res.product.name);
+      if (res.product.description) $('#product > .description').text(res.product.description);
+      if (res.product.bgColor) $('#product').css('backgroundColor', res.product.bgColor);
+      if (res.product.color) $('#product').css('color', res.product.color);
+      if (res.product.image) $('#product').css('backgroundImage', `url('./images/${res.product.image}')`);
+    }
+
+    // update apply form info
+    if (res.applyForm) {
+      if (res.applyForm.description) $('#formSection > p').text(res.applyForm.description);
+      if (res.applyForm.bgColor) $('#formSection').css('backgroundColor', res.applyForm.bgColor);
+    }
 
     // create section
-    if (res.applyDescription) $('.formSection > p').text(res.applyDescription);
     if (res.sections && res.sections.length>0) {
       const content = res.sections.reduce((ele, section) => {
+        let style = '';
+        if (section.image) style += `background-image: url('./images/${section.image}');`;
+        if (section.bgColor) style += `background-color: ${section.bgColor};`;
+        let contentStyle = '';
+        if (section.wordBgColor) contentStyle += `background-color: ${section.wordBgColor};`;
+        if (section.wordColor) contentStyle += `color: ${section.wordColor};`;
+
         ele +=`
-          <section style="background-image: url('./images/${section.image}')">
-            <div class="content">
+          <section style="${style}">
+            <div class="content" style="${contentStyle}">
               <div class="title">${section.title}</div>
               <div class="description">${section.description}</div>
             </div>
             <div class="empty"></div>
           </section>
         `;
-        return ele
+        return ele;
       }, '');
-      $('.formSection').before(content);
+      $('#product').after(content);
     }
   })
 })
