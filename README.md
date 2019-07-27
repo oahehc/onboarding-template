@@ -14,10 +14,19 @@
 #### update app/scripts/config.json
 ### STEP 3 
 #### deploy your website
-1. run gulp on command line
-2. upload file in dist folder to the server
+1. execute `gulp` or `npm run build` on terminal
+2. upload the file in dist folder to the server
 --- 
 
 ### apply information collect by ga event
 ![Imgur](https://i.imgur.com/ZcaPbA1.png)
 
+
+---
+
+### scripts
+```
+  npm run start          ... start local server
+  npm run build          ... build prod version to dist folder
+  npm run start:prod     ... start local server with dist folder
+```
